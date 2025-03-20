@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(34, 34, 34, 1) 100%);
+  overflow: hidden;
+  position: relative;
+}
+
+.game-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+canvas {
+  border: 2px solid #fff;
+}
+
+#scoreboard {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+/* Vibe animations for background */
+@keyframes particleMovement {
+  0% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 0.6; }
+}
+
+.particle {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  animation: particleMovement 3s infinite ease-in-out;
+}
+
+.particle-1 { width: 10px; height: 10px; }
+.particle-2 { width: 15px; height: 15px; }
+.particle-3 { width: 20px; height: 20px; }
+
