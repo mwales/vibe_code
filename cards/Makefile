@@ -6,11 +6,11 @@ CXXFLAGS = -Wall -std=c++17
 LIBS = -lncursesw
 
 # Default target
-all: main
+all: game
 
 # Link main
-main: main.o Card.o
-	$(CXX) $(CXXFLAGS) -o main main.o Card.o $(LIBS)
+game: main.o Card.o
+	$(CXX) $(CXXFLAGS) -o game main.o Card.o $(LIBS)
 
 # Compile main.cpp
 main.o: main.cpp Card.h
